@@ -1,118 +1,131 @@
-# Event Management System
+# Event Management Platform
 
-A full-stack web application for managing events, bookings, and payments. Built with Flask (Backend) and React (Frontend).
+A comprehensive web application for streamlining college event organization and volunteer management. This platform enables efficient event planning, volunteer coordination, and participant registration for college events.
 
 ## Features
 
-- User Authentication & Authorization
-- Event Creation and Management
-- Ticket Booking System
-- Secure Payment Processing
-- Event Search and Filtering
-- User Dashboard
-- Admin Panel for Event Management
+- **User Authentication**
+  - Secure login and registration
+  - Role-based access control
+  - Email verification
+
+- **Event Management**
+  - Create and manage events
+  - Track event lifecycle
+  - Resource allocation
+  - Participant registration
+
+- **Volunteer System**
+  - Volunteer registration
+  - Skill tracking
+  - Availability management
+  - Task assignment
+
+- **Payment Integration**
+  - Secure payment processing
+  - Transaction history
+  - Payment status tracking
 
 ## Tech Stack
 
 ### Backend
-- Python 3.x
-- Flask
-- SQLite Database
-- Flask-SQLAlchemy
-- Flask-JWT-Extended
-- Flask-CORS
+- Flask (Python web framework)
+- SQLite (Database)
+- Flask-Login (Authentication)
+- Flask-Migrate (Database migrations)
+- SQLAlchemy (ORM)
 
 ### Frontend
-- React.js
-- Material-UI
+- React
+- Tailwind CSS
 - Axios
+- Formik
 - React Router
-- React Context API
 
-## Prerequisites
+## Getting Started
 
-Before running the application, make sure you have:
-- Python 3.x installed
-- Node.js and npm installed
-- Git (optional)
+### Prerequisites
+- Python 3.8+
+- Node.js 14+
+- npm or yarn
 
-## Installation
+### Backend Setup
+1. Clone the repository
+   ```bash
+   git clone https://github.com/Ktripathi2611/event-management-.git
+   cd event-management
+   ```
 
-1. **Clone the repository** (if using Git)
-```bash
-git clone [repository-url]
-cd event-management
+2. Create and activate virtual environment
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+3. Install dependencies
+   ```bash
+   cd backend
+   pip install -r requirements.txt
+   ```
+
+4. Set up environment variables
+   ```bash
+   cp .env.example .env
+   # Edit .env with your configurations
+   ```
+
+5. Initialize database
+   ```bash
+   flask db upgrade
+   ```
+
+6. Run the server
+   ```bash
+   flask run
+   ```
+
+### Frontend Setup
+1. Install dependencies
+   ```bash
+   cd frontend
+   npm install
+   ```
+
+2. Start development server
+   ```bash
+   npm start
+   ```
+
+## Project Structure
+```
+event-management/
+├── backend/
+│   ├── routes/
+│   ├── models/
+│   ├── migrations/
+│   └── requirements.txt
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   └── package.json
+└── README.md
 ```
 
-2. **Backend Setup**
-```bash
-cd backend
-python -m venv venv
-# For Windows
-venv\Scripts\activate
-# For Unix/MacOS
-source venv/bin/activate
+## Security Features
+- Password hashing
+- JWT authentication
+- CSRF protection
+- Input validation
+- Rate limiting
 
-pip install -r requirements.txt
-```
-
-3. **Frontend Setup**
-```bash
-cd frontend
-npm install
-```
-
-## Configuration
-
-1. **Backend Configuration**
-- Create a `.env` file in the backend directory
-```
-FLASK_APP=app.py
-FLASK_ENV=development
-DATABASE_URL=sqlite:///instance/events.db
-JWT_SECRET_KEY=your-secret-key
-```
-
-2. **Frontend Configuration**
-- The frontend configuration is preset in the `.env` file
-
-## Running the Application
-
-1. **Start the Backend Server**
-```bash
-cd backend
-python app.py
-```
-The backend server will start at `http://localhost:5000`
-
-2. **Start the Frontend Development Server**
-```bash
-cd frontend
-npm start
-```
-The frontend will be available at `http://localhost:3000`
-
-## API Endpoints
-
-### Authentication
-- POST `/api/auth/register` - User registration
-- POST `/api/auth/login` - User login
-
-### Events
-- GET `/api/events` - Get all events
-- GET `/api/events/<id>` - Get specific event
-- POST `/api/events` - Create new event (Admin only)
-- PUT `/api/events/<id>` - Update event (Admin only)
-- DELETE `/api/events/<id>` - Delete event (Admin only)
-
-### Bookings
-- GET `/api/bookings` - Get user bookings
-- POST `/api/bookings` - Create new booking
-- GET `/api/bookings/<id>` - Get specific booking
-- DELETE `/api/bookings/<id>` - Cancel booking
+## Future Enhancements
+- Real-time notifications
+- Advanced analytics dashboard
+- Mobile app development
+- Multi-language support
+- Academic system integration
 
 ## Contributing
-
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
@@ -120,9 +133,7 @@ The frontend will be available at `http://localhost:3000`
 5. Open a Pull Request
 
 ## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-This project is licensed under the MIT License - see the LICENSE file for details
-
-## Support
-
-For support, email [support-email] or create an issue in the repository.
+## Contact
+- Project Link: [https://github.com/Ktripathi2611/event-management-](https://github.com/Ktripathi2611/event-management-)
